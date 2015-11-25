@@ -10,7 +10,7 @@
 @media (min-width: em(768)) {
 
 	/* Left Sidebar */
-	.left-sidebar {
+	.page-left-sidebar {
 		@include row(block, rtl);
 
 		.content-area {
@@ -22,7 +22,7 @@
 	}
 
 	/* Right Sidebar */
-	.right-sidebar {
+	.page-right-sidebar {
 		@include row(block, ltr);
 
 		.content-area {

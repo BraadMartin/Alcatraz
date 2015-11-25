@@ -25,9 +25,9 @@ function alcatraz_body_classes( $classes ) {
 	// Page layout class.
 	$page_layout = get_post_meta( $post->ID, '_alcatraz_page_layout', true );
 	if ( $page_layout && 'default' != $page_layout ) {
-		$classes[] = esc_attr( $page_layout );
+		$classes[] = 'page-' . esc_attr( $page_layout );
 	} elseif ( isset( $options['page_layout'] ) ) {
-		$classes[] = esc_attr( $options['page_layout'] );
+		$classes[] = 'page-' . esc_attr( $options['page_layout'] );
 	}
 
 	// Header style class.
@@ -49,7 +49,7 @@ function alcatraz_body_classes( $classes ) {
 	// Header text color class.
 	$header_text_color = get_post_meta( $post->ID, '_alcatraz_header_text_color', true );
 	if ( $header_text_color && 'default' != $header_text_color ) {
-		$classes[] = 'header-' . esc_attr( $header_text_color );
+		$classes[] = 'header-text-color-' . esc_attr( $header_text_color );
 	}
 
 	// Page Banner class.
